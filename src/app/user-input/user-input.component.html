@@ -1,4 +1,4 @@
-<form ngSubmit="onSubmit()">
+<form (ngSubmit)="onSubmit()">
   <div class="input-group">
     <p>
       <label for="initial-investment">Initial Investment</label>
@@ -24,11 +24,7 @@
     </p>
   </div>
   <p>
-    <button>Calculate</button>
+    <button type="submit">Calculate</button>
   </p>
 </form>
 
-<!-- <p>{{initialInvestment}}</p>
-<p>{{annualInvestment}}</p>
-<p>{{expectedReturn}}</p>
-<p>{{duration}}</p> -->

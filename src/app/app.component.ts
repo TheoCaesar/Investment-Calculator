@@ -1,13 +1,9 @@
 import { HeaderComponent } from './header/header.component';
 import { Component } from '@angular/core';
 import { UserInputComponent } from './user-input/user-input.component';
+import { type InvestmentData } from './investment-data.model';
 
-export interface investmentData {
-  initialInvestment: number
-  annualInvestment: number
-  expectedReturn: number
-  duration: number
-}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,7 +11,7 @@ export interface investmentData {
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  calculateInvestmentResults(data: investmentData) {
+  onCalculateInvestmentResults(data: InvestmentData) {
     const {initialInvestment, annualInvestment, expectedReturn, duration} = data;
     const annualData = [];
     let investmentValue = initialInvestment;
@@ -36,6 +32,6 @@ export class AppComponent {
       });
     }
 
-    return annualData;
+    console.log(annualData);
   }
 }
