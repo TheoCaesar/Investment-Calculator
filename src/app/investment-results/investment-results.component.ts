@@ -13,6 +13,6 @@ export class InvestmentResultsComponent {
 
   get results() {{
     //get service property storing results post execution
-    return this.investService.resultsData;
+    return this.investService.resultsData.asReadonly();
   }}
 }
